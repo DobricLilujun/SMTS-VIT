@@ -51,11 +51,11 @@ $$ \mathcal{L_{CR}} = -\frac{1}{N \times H \times W} \sum_{i=1}^{N} \sum_{h=1}^{
 
 
 where:
-- \(N\) is the number of images in the batch,
-- \(H\) and \(W\) are the height and width of the image,
-- \(C\) is the number of classes (or channels for multi-class segmentation),
-- \(y_{i,h,w,c}\) is the true label for the pixel \((h, w)\) in image \(i\) and class \(c\),
-- \(\hat{y}_{i,h,w,c}\) is the predicted probability for the pixel \((h, w)\) in image \(i\) and class \(c\).
+-  $N$ is the number of images in the batch,
+-  $H$ and $W$ are the height and width of the image,
+-  $C$ is the number of classes (or channels for multi-class segmentation),
+- $y_{i,h,w,c}$ is the true label for the pixel $(h, w)$ in image $i$ and class $c$,
+- $\hat{y}_{i,h,w,c}$ is the predicted probability for the pixel $(h, w)$ in image $i$ and class $c$.
 
 Additionally, overall Accuracy and F1 Score were used as metrics to evaluate the efficiency of the crop mapping process. As shown in Table \ref{tab:table results cropmapping}, it can be observed that the model, SMTS-ViT, demonstrates the best classification performance, particularly in the absence of cloud interference, with an accuracy of **93.5%**. In comparison, MTS-ViT reaches an accuracy of **90.6%**. However, these models exhibit poor generalization on the 2021 dataset due to a cross-domain issue. This occurs because the distribution of data for the same target crop varies across different regions or years. Since the model was trained exclusively on the 2020 dataset, it became overfitted to that specific distribution. However, SMTS-ViT achieved better classification accuracy for the 2021 dataset, with an OA of 0.623 and an F1 Score of 0.621, outperforming other methods. A better OA of 0.641 and F1 Score of 0.624 on the 2021 validation set for MTS-ViT are observed due to overfitting. However, in reconstruction tasks, SMTS-ViT still demonstrates a notable performance advantage.
 
