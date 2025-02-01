@@ -5,8 +5,8 @@ This repository serves as a platform for showcasing supplementary visual outcome
 
 Partial occlusion experiments were conducted with one day fully covered by cloud, as illustrated in [Figure 1](#figure-1). Specifically, we fully occluded the fifth input image to simulate scenarios where certain regions are entirely obstructed. Using our SMTS-ViT, we observed that the model successfully inferred the missing image's texture, color, and other details, even in the presence of cloud interference across the remaining inputs. In contrast, we found that S-ViT, lacking temporal sequence information, could only rely on random guessing. Its output images were significantly affected by the cloud occlusions, particularly on day 170, where it started generating arbitrary predictions rather than logically filling in based on spatial-temperal information. Furthermore, the reconstructed colors exhibited substantial distortion. On the other hand, SMTS-ViT demonstrated a clear advantage over MTS-ViT in terms of detail restoration and color consistency, as evident in the comparative results for days 170 and 190. This directly validates the necessity of leveraging multichannel data and highlights the superiority of our method over non-temporal sequence ViT models, especially under scenarios involving cloud-induced occlusions. 
 
-<figure>
-  <img src="Figures/PNG/output_good_2.png" alt="Additional Results for Scenarios with One Day Fully Obscured by Cloud Coverage (# Cloud = 10)" style="width:100%">
+<figure style="text-align: center;">
+  <img src="Figures/PNG/output_good_2.png" alt="Additional Results for Scenarios with One Day Fully Obscured by Cloud Coverage (# Cloud = 10)" style="width: 60%; max-width: 600px; height: auto;">
   <figcaption id="figure-1">Figure 1: Additional Results for Scenarios with One Day Fully Obscured by Cloud Coverage (# Cloud = 10)</figcaption>
 </figure>
 
@@ -14,8 +14,8 @@ Partial occlusion experiments were conducted with one day fully covered by cloud
 
 Furthermore, experiments were also conducted with two days of coverage, where inputs from two days were occluded. It can be observed that our SMTS-ViT still manages to predict the missing regions' textures relatively accurately, as shown in [Figure 2](#figure-2). Although the model exhibits slight color distortion, it successfully reconstructs the texture details and captures the temporal trends in color variation,
 
-<figure>
-  <img src="Figures/PNG/output_good_2_coverage.png" alt="Additional Results for Scenarios with Two Days Fully Obscured by Cloud Coverage (# Cloud = 10)" style="width:100%">
+<figure style="text-align: center;">
+  <img src="Figures/PNG/output_good_2_coverage.png" alt="Additional Results for Scenarios with Two Days Fully Obscured by Cloud Coverage (# Cloud = 10)" style="width: 60%; max-width: 600px; height: auto;">
   <figcaption id="figure-2">Figure 2: Additional Results for Scenarios with Two Days Fully Obscured by Cloud Coverage (# Cloud = 10)</figcaption>
 </figure>
 
