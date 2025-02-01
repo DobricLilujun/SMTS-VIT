@@ -46,9 +46,9 @@ The potential application of restoring heavily cloud-covered images lies in crop
 
 The classifier consists of a series of convolutional layers with increasing depth (64 to 512 channels), each followed by batch normalization and ReLU activation. A dropout layer is included to prevent overfitting, and a final convolutional layer outputs class probabilities using softmax, enabling effective image classification with robust feature extraction and spatial attention. Throughout the training process, we froze the parameters of the reconstruction model and used cross-entropy loss as the objective function. The definition of the cross-entropy loss is as follows:
 
-\[
-\mathcal{L_{CR}} = -\frac{1}{N \times H \times W} \sum_{i=1}^{N} \sum_{h=1}^{H} \sum_{w=1}^{W} \sum_{c=1}^{C} y_{i,h,w,c} \log(\hat{y}_{i,h,w,c}), 
-\]
+
+$$ \mathcal{L_{CR}} = -\frac{1}{N \times H \times W} \sum_{i=1}^{N} \sum_{h=1}^{H} \sum_{w=1}^{W} \sum_{c=1}^{C} y_{i,h,w,c} \log(\hat{y}_{i,h,w,c}), $$
+
 
 where:
 - \(N\) is the number of images in the batch,
